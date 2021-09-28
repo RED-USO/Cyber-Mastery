@@ -122,8 +122,8 @@ SSH into the control node and follow the steps below:
 
       •   Copy the configuration file to the Ansible container
       •   Update the hosts file to include the Web1, Web2 and ELK VM IP addresses
-      •   Run the playbook, and navigate to http://[public IP address of ELK VM]/app/kibana to check that
-          the installation worked as expected.
+      •   Run the playbook, and navigate to http://[public IP address of ELK VM]/app/kibana to check
+          that the installation worked as expected.
       
       •   The playbook file is called filebeat-playbook.yml and you copy it to /etc/ansible/roles/
           directory.
