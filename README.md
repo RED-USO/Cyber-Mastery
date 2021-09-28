@@ -91,7 +91,7 @@ The playbook implements the following tasks:
           
 The following screenshot displays the result of running sudo docker ps -a after successfully configuring the ELK instance.
 
-Note: The following image link needs to be updated. Replace docker_ps_output.png with the name of your screenshot image file.
+*Note: The following image link needs to be updated. Replace docker_ps_output.png with the name of your screenshot image file.*
  
 ## Target Machines & Beats
 
@@ -127,9 +127,7 @@ SSH into the control node and follow the steps below:
       
       •   The playbook file is called filebeat-playbook.yml and you copy it to /etc/ansible/roles/
           directory.
-      *Which file is the playbook? Where do you copy it?*
       •   You update the filebeat-config.yml to make Ansible run the playbook on a specific machine.
-      *How do I specify which machine to install the ELK server on versus which to install Filebeat on?*
       •   The URL you navigate to, in order to check that the ELK server is running, is
           http://[public IP address of ELK VM]/app/kibana.
       
