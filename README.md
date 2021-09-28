@@ -109,8 +109,8 @@ These Beats allow us to collect the following information from each machine:
 
       •   Filebeat and Metricbeat have been installed on both Web1 and Web2 servers.
       •   Filebeat collects system type events such as who’s actively logging into the system.
-      •   Metricbeat collects useful information such as cpu usage and memory. This is useful when there
-          are programs or behaviors taking system resources.
+      •   Metricbeat collects useful information such as cpu usage and memory. This is useful when
+          there are programs or behaviors taking system resources.
           
 *TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.*
 
