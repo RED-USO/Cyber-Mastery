@@ -102,8 +102,6 @@ These Beats allow us to collect the following information from each machine:
   * [Filebeat Log Example in Kibana](https://github.com/RED-USO/Cyber-Mastery/blob/3c2fb2d0196f3e5e44fb4050d731d6aca4d5257b/Images/Filebeat%20Log%20Pic.jpg)
 * Metricbeat collects useful information such as cpu usage and memory. This is useful when there are programs or behaviors taking system resources.
   * [Metricbeat CPU Usage in Kibana](https://github.com/RED-USO/Cyber-Mastery/blob/3c2fb2d0196f3e5e44fb4050d731d6aca4d5257b/Images/Metricbeat%20Metric%20Pic.jpg)
-          
-*TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.*
 
 ## Using the Playbook
 
