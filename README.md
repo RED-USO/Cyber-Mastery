@@ -122,19 +122,29 @@ SSH into the control node and follow the steps below:
       
 *As a Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc.*
 
-### What the User Will Need to Run for ELK
+### What the User Will Need to Run ELK
 
 * First ssh into Jump-Box VM `ssh Admin@52.158.231.29(Jump-Box Public IP)`
   * Jump-Box command prompt should look like this example: **`Admin@Jump-Box-Provisioner`**
 * Start your Ansible Container `sudo docker start example_docker`
 * Next attach into your Ansible Container `sudo docker attach example_docker'
   * Ansible Container command prompt should look like this example: **`root@6160a9be360e`**
-* Run command `cd /etc/ansible/` to enter the ansible directory and locate **install-Elk.yml** there
+* Run command `cd /etc/ansible/` to enter the ansible directory and locate **install-Elk.yml**
 * Locate the `hosts` file in `/etc/ansible/` and edit this file with command `nano hosts`
 ![Host File Example](https://github.com/RED-USO/Cyber-Mastery/blob/cf4e70ec95a84db2b0730b41b511b5fa8fd87f44/Ansible/Hosts%20File%20Example.jpg)
 * To run the Playbook run command `ansible-playbook install-Elk.yml`
-* Verify you can access your server by inputting http://[your_elk_server_ip]:5601/app/kibana into your browser
+* Verify you can access your server by inputting `http://[your_elk_server_ip]:5601/app/kibana` into your browser
   * You should see something similar to this:
-  * 
+  * ![Kibana Success](https://github.com/RED-USO/Cyber-Mastery/blob/b31c3b5e6bda058f23477d00a9c367cd7ea44b9c/Images/Kibana%20Successful.jpg)
 
+### What the User Will Need to Run Filebeat & Metricbeat
 
+* First ssh into Jump-Box VM `ssh Admin@52.158.231.29(Jump-Box Public IP)`
+  * Jump-Box command prompt should look like this example: **`Admin@Jump-Box-Provisioner`**
+* Start your Ansible Container `sudo docker start example_docker`
+* Next attach into your Ansible Container `sudo docker attach example_docker'
+  * Ansible Container command prompt should look like this example: **`root@6160a9be360e`**
+* Run command `cd /etc/ansible/roles` to enter the roles directory and locate **filebeat-playbook.yml**
+* To run the Playbook run command `ansible-playbook filebeat-playbook.yml`
+* Verify in kibana that it was successful
+  * You should see something similar to this:
