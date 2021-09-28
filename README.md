@@ -6,17 +6,16 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 
-• [Install ELK](https://github.com/RED-USO/Cyber-Mastery/blob/722cf1f153e85e157b3e50b1832db1283de02a48/Ansible/install-Elk.jpg)
-
-• [DVWA](https://github.com/RED-USO/Cyber-Mastery/blob/7577f0a0bca0ca6f01d6fae47f015062e2090900/Ansible/DVWA%20Setup%20yml%20script.jpg)
+* [Install ELK](https://github.com/RED-USO/Cyber-Mastery/blob/722cf1f153e85e157b3e50b1832db1283de02a48/Ansible/install-Elk.jpg)
+* [DVWA](https://github.com/RED-USO/Cyber-Mastery/blob/7577f0a0bca0ca6f01d6fae47f015062e2090900/Ansible/DVWA%20Setup%20yml%20script.jpg)
 
 This document contains the following details:
 
 * Description of the Topology
 * Access Policies
 * ELK Configuration 
-  * o Beats in Use
-  * o   Machines Being Monitored
+  * Beats in Use
+  * Machines Being Monitored
 * How to Use the Ansible Build
 
 ## Description of the Topology
