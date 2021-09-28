@@ -65,7 +65,7 @@ Name | Publicly Accessible | Allowed IP Addresses
 Jump-Box VM | SSH - 22 - YES | Personal Public IP
 Web1 & Web2 | NO | 10.1.0.4 & Red-Team LB IP: 52.183.4.37
 Red-Team LB | HTTP - 80 - YES | Personal Public IP
-ELK | SSH - 22 – YES HTTP - 80 - YES | 10.1.0.4, 10.1.0.5, 10.1.0.6 Personal Public IP
+ELK | SSH - 22 – YES & HTTP - 80 - YES | 10.1.0.4, 10.1.0.5, 10.1.0.6 Personal Public IP
 
 ## Elk Configuration
 
