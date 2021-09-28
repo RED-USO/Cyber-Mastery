@@ -122,15 +122,19 @@ SSH into the control node and follow the steps below:
       
 *As a Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc.*
 
-### What the User Will Need to Know
+### What the User Will Need to Run for ELK
 
 * First ssh into Jump-Box VM `ssh Admin@52.158.231.29(Jump-Box Public IP)`
-  * Jump-Box command prompt should look like this now: **`Admin@Jump-Box-Provisioner`**
+  * Jump-Box command prompt should look like this example: **`Admin@Jump-Box-Provisioner`**
 * Start your Ansible Container `sudo docker start example_docker`
 * Next attach into your Ansible Container `sudo docker attach example_docker'
-  * Ansible Container command prompt should look like this now: **`root@6160a9be360e`**
+  * Ansible Container command prompt should look like this example: **`root@6160a9be360e`**
 * Run command `cd /etc/ansible/` to enter the ansible directory and locate **install-Elk.yml** there
 * Locate the `hosts` file in `/etc/ansible/` and edit this file with command `nano hosts`
-
+![Host File Example](https://github.com/RED-USO/Cyber-Mastery/blob/cf4e70ec95a84db2b0730b41b511b5fa8fd87f44/Ansible/Hosts%20File%20Example.jpg)
+* To run the Playbook run command `ansible-playbook install-Elk.yml`
+* Verify you can access your server by inputting http://[your_elk_server_ip]:5601/app/kibana into your browser
+  * You should see something similar to this:
+  * 
 
 
