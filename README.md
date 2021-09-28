@@ -12,12 +12,12 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 This document contains the following details:
 
-      •	Description of the Topology
-      •	Access Policies
-      •	ELK Configuration 
-            o   Beats in Use
-            o   Machines Being Monitored
-      •	How to Use the Ansible Build
+* Description of the Topology
+* Access Policies
+* ELK Configuration 
+  * o Beats in Use
+  * o   Machines Being Monitored
+* How to Use the Ansible Build
 
 ## Description of the Topology
 
@@ -25,19 +25,13 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-      •	Security-wise a load balancer can have integrated intrusion prevention and web application
-            firewall services to add another layer of protection against DDos attacks.  The load
-            balancer is meant to reroute live traffic from one server to another if a server is hit
-            with a DDoS attack or becomes unavailable.
-      •	The advantage of a jump box is that it’s a secured computer that only admins first connect
-            to before they do any administrative tasks.  It can also serve as a gateway to gain entry
-            into a remote network.
+* Security-wise a load balancer can have integrated intrusion prevention and web application firewall services to add another layer of protection against DDos attacks.  The load balancer is meant to reroute live traffic from one server to another if a server is hit with a DDoS attack or becomes unavailable.
+* The advantage of a jump box is that it’s a secured computer that only admins first connect to before they do any administrative tasks.  It can also serve as a gateway to gain entry into a remote network.
             
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 
-      •	Filebeat monitors the log files or locations that are specified.
-      •	Metricbeat collects metrics and statistics, from the OS, and sends them to a specified
-            location.
+* Filebeat monitors the log files or locations that are specified.
+* Metricbeat collects metrics and statistics, from the OS, and sends them to a specified location.
 
 The configuration details of each machine may be found below. Note: Use the Markdown Table Generator to add/remove values from the table.
 
@@ -54,12 +48,11 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box VM machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-      •   Access to Jump-Box VM is only allowed from my public IP.
+* Access to Jump-Box VM is only allowed from my public IP.
       
 Machines within the network can only be accessed by the Jump-Box VM.
 
-      •   The Jump-Box VM private IP 10.1.0.4 was only allowed access to the ELK VM, which is accessed
-          through the ELK’s private IP 10.2.0.5.
+* The Jump-Box VM private IP 10.1.0.4 was only allowed access to the ELK VM, which is accessed through the ELK’s private IP 10.2.0.5.
  
 A summary of the access policies in place can be found in the table below.
 
@@ -74,22 +67,18 @@ ELK | SSH - 22 – YES & HTTP - 80 - YES | 10.1.0.4, 10.1.0.5, 10.1.0.6 Personal
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
-      •   Ansible has portable playbooks, YAML and non-YAML scripts, which can be used anywhere as well
-          as repeatable.
-      •   Ansible can easily track containers along with knowing what’s in them incase you need to
-          rebuild them.
-      •   Ansible can maintain the environment in which all the containers are in, even high complex
-          environments.
+* Ansible has portable playbooks, YAML and non-YAML scripts, which can be used anywhere as well as repeatable.
+* Ansible can easily track containers along with knowing what’s in them incase you need to rebuild them.
+* Ansible can maintain the environment in which all the containers are in, even high complex environments.
 
 The playbook implements the following tasks:
 
-      •   Installs Docker Engine used for running containers
-      •   Installs python3-pip which is the package used to install the Python software
-      •   Installs Docker module which is a Python client for Docker and will default to pip3
-      •   Increase Memory to the VM
-      •   Configures the container to start with specific port mappings
-      •   Enables the docker service on boot which if you restart the ELK VM, the docker service will
-          automatically start up
+* Installs Docker Engine used for running containers
+* Installs python3-pip which is the package used to install the Python software
+* Installs Docker module which is a Python client for Docker and will default to pip3
+* Increase Memory to the VM
+* Configures the container to start with specific port mappings
+* Enables the docker service on boot which if you restart the ELK VM, the docker service will automatically start up
           
 The following screenshot displays the result of running sudo docker ps -a after successfully configuring the ELK instance.
 
