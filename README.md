@@ -3,16 +3,27 @@
 The files in this repository were used to configure the network depicted below.
  
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
+
 Install ELK
+
 This document contains the following details:
-•	Description of the Topology
-•	Access Policies
-•	ELK Configuration 
-o	Beats in Use
-o	Machines Being Monitored
-•	How to Use the Ansible Build
-Description of the Topology
+
+      •	Description of the Topology
+   
+      •	Access Policies
+   
+      •	ELK Configuration 
+   
+         o	Beats in Use
+      
+         o	Machines Being Monitored
+   
+      •	How to Use the Ansible Build
+
+# Description of the Topology
+
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 •	Security-wise a load balancer can have integrated intrusion prevention and web application firewall services to add another layer of protection against DDos attacks.  The load balancer is meant to reroute live traffic from one server to another if a server is hit with a DDoS attack or becomes unavailable.
 •	The advantage of a jump box is that it’s a secured computer that only admins first connect to before they do any administrative tasks.  It can also serve as a gateway to gain entry into a remote network. 
