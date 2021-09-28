@@ -125,7 +125,8 @@ SSH into the control node and follow the steps below:
       •   Run the playbook, and navigate to http://[public IP address of ELK VM]/app/kibana to check that
           the installation worked as expected.
       
-      •   The playbook file is called filebeat-playbook.yml and you copy it to /etc/ansible/roles/ directory.
+      •   The playbook file is called filebeat-playbook.yml and you copy it to /etc/ansible/roles/
+          directory.
       *Which file is the playbook? Where do you copy it?*
       •   You update the filebeat-config.yml to make Ansible run the playbook on a specific machine.
       *How do I specify which machine to install the ELK server on versus which to install Filebeat on?*
