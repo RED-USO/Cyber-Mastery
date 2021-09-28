@@ -137,7 +137,7 @@ SSH into the control node and follow the steps below:
   * You should see something similar to this:
   * ![Kibana Success](https://github.com/RED-USO/Cyber-Mastery/blob/b31c3b5e6bda058f23477d00a9c367cd7ea44b9c/Images/Kibana%20Successful.jpg)
 
-### What the User Will Need to Run Filebeat & Metricbeat
+### What the User Will Need to Run Filebeat
 
 * First ssh into Jump-Box VM `ssh Admin@52.158.231.29(Jump-Box Public IP)`
   * Jump-Box command prompt should look like this example: **`Admin@Jump-Box-Provisioner`**
@@ -148,3 +148,17 @@ SSH into the control node and follow the steps below:
 * To run the Playbook run command `ansible-playbook filebeat-playbook.yml`
 * Verify in kibana that it was successful
   * You should see something similar to this:
+  * ![Filebeat Success](https://github.com/RED-USO/Cyber-Mastery/blob/e5a7aa22da81b56c09329a8860bf195a572dabe5/Images/Filebeat%20Successfull%20Data.jpg)
+
+### What the User Will Need to Run Metricbeat
+
+* First ssh into Jump-Box VM `ssh Admin@52.158.231.29(Jump-Box Public IP)`
+  * Jump-Box command prompt should look like this example: **`Admin@Jump-Box-Provisioner`**
+* Start your Ansible Container `sudo docker start example_docker`
+* Next attach into your Ansible Container `sudo docker attach example_docker'
+  * Ansible Container command prompt should look like this example: **`root@6160a9be360e`**
+* Run command `cd /etc/ansible/roles` to enter the roles directory and locate **filebeat-playbook.yml**
+* To run the Playbook run command `ansible-playbook filebeat-playbook.yml`
+* Verify in kibana that it was successful
+  * You should see something similar to this:
+  * ![Metricbeat Success](https://github.com/RED-USO/Cyber-Mastery/blob/e5a7aa22da81b56c09329a8860bf195a572dabe5/Images/Metricbeat%20Successfull%20Data.jpg)
