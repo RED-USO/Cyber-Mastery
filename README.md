@@ -80,28 +80,27 @@ The playbook implements the following tasks:
 * Configures the container to start with specific port mappings
 * Enables the docker service on boot which if you restart the ELK VM, the docker service will automatically start up
           
-The following screenshot displays the result of running sudo docker ps -a after successfully configuring the ELK instance.
+The following screenshot displays the result of running `sudo docker ps -a` after successfully configuring the ELK instance.
 
-*Note: The following image link needs to be updated. Replace docker_ps_output.png with the name of your screenshot image file.*
+![Docker ps](https://github.com/RED-USO/Cyber-Mastery/blob/cd77a00750f4b536a3b94799ea05de7b780f0eb1/Ansible/Docker%20ps%20-a.jpg)
  
 ## Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
 
-      •   Web1: 10.1.0.6
-      •   Web2: 10.1.0.5
+* Web1: 10.1.0.6
+* Web2: 10.1.0.5
 
 We have installed the following Beats on these machines:
 
-      •   Filebeat
-      •   Metricbeat
+* Filebeat
+* Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
-      •   Filebeat and Metricbeat have been installed on both Web1 and Web2 servers.
-      •   Filebeat collects system type events such as who’s actively logging into the system.
-      •   Metricbeat collects useful information such as cpu usage and memory. This is useful when
-          there are programs or behaviors taking system resources.
+* Filebeat and Metricbeat have been installed on both Web1 and Web2 servers.
+* Filebeat collects system type events such as who’s actively logging into the system.
+* Metricbeat collects useful information such as cpu usage and memory. This is useful when there are programs or behaviors taking system resources.
           
 *TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.*
 
