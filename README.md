@@ -109,18 +109,14 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-      •   Copy the configuration file to the Ansible container
-      •   Update the hosts file to include the Web1, Web2 and ELK VM IP addresses
-      •   Run the playbook, and navigate to http://[public IP address of ELK VM]/app/kibana to check
-          that the installation worked as expected.
+* Copy the configuration file to the Ansible container
+* Update the hosts file to include the Web1, Web2 and ELK VM IP addresses
+* Run the playbook, and navigate to http://[public IP address of ELK VM]/app/kibana to check that the installation worked as expected.
       
-      •   The playbook file is called filebeat-playbook.yml and you copy it to /etc/ansible/roles/
-          directory.
-      •   You update the filebeat-config.yml to make Ansible run the playbook on a specific machine.
-      •   The URL you navigate to, in order to check that the ELK server is running, is
-          http://[public IP address of ELK VM]/app/kibana.
-      
-*As a Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc.*
+* The playbook file is called filebeat-playbook.yml and you copy it to /etc/ansible/roles/ directory.
+* You update the filebeat-config.yml to make Ansible run the playbook on a specific machine.
+* The URL you navigate to, in order to check that the ELK server is running, is http://[public IP address of ELK VM]/app/kibana.
+
 
 ### What the User Will Need to Run ELK
 
@@ -135,7 +131,7 @@ SSH into the control node and follow the steps below:
 * To run the Playbook run command `ansible-playbook install-Elk.yml`
 * Verify you can access your server by inputting `http://[your_elk_server_ip]:5601/app/kibana` into your browser
   * You should see something similar to this:
-  * ![Kibana Success](https://github.com/RED-USO/Cyber-Mastery/blob/b31c3b5e6bda058f23477d00a9c367cd7ea44b9c/Images/Kibana%20Successful.jpg)
+![Kibana Success](https://github.com/RED-USO/Cyber-Mastery/blob/b31c3b5e6bda058f23477d00a9c367cd7ea44b9c/Images/Kibana%20Successful.jpg)
 
 ### What the User Will Need to Run Filebeat
 
@@ -146,11 +142,11 @@ SSH into the control node and follow the steps below:
   * Ansible Container command prompt should look like this example: **`root@6160a9be360e`**
 * Run command `cd /etc/ansible/roles` to enter the roles directory and locate **filebeat-playbook.yml**
   * The filebeat-playbook.yml should look similar to this:
-  * ![filebeat-playbook](https://github.com/RED-USO/Cyber-Mastery/blob/eeb85eb7d54e7369078505f94de716c23e54b3ac/Ansible/filebeat-playbook%20yml%20script.jpg)
+![filebeat-playbook](https://github.com/RED-USO/Cyber-Mastery/blob/eeb85eb7d54e7369078505f94de716c23e54b3ac/Ansible/filebeat-playbook%20yml%20script.jpg)
 * To run the Playbook run command `ansible-playbook filebeat-playbook.yml`
 * Verify in kibana that it was successful
   * You should see something similar to this:
-  * ![Filebeat Success](https://github.com/RED-USO/Cyber-Mastery/blob/e5a7aa22da81b56c09329a8860bf195a572dabe5/Images/Filebeat%20Successfull%20Data.jpg)
+![Filebeat Success](https://github.com/RED-USO/Cyber-Mastery/blob/e5a7aa22da81b56c09329a8860bf195a572dabe5/Images/Filebeat%20Successfull%20Data.jpg)
 
 ### What the User Will Need to Run Metricbeat
 
@@ -161,8 +157,8 @@ SSH into the control node and follow the steps below:
   * Ansible Container command prompt should look like this example: **`root@6160a9be360e`**
 * Run command `cd /etc/ansible/roles` to enter the roles directory and locate **metricbeat-playbook.yml**
   * The metricbeat-playbook.yml should look similar to this:
-  * ![metricbeat-playbook](https://github.com/RED-USO/Cyber-Mastery/blob/eeb85eb7d54e7369078505f94de716c23e54b3ac/Ansible/metricbeat-playbook%20yml%20script.jpg)
+![metricbeat-playbook](https://github.com/RED-USO/Cyber-Mastery/blob/eeb85eb7d54e7369078505f94de716c23e54b3ac/Ansible/metricbeat-playbook%20yml%20script.jpg)
 * To run the Playbook run command `ansible-playbook metricbeat-playbook.yml`
 * Verify in kibana that it was successful
   * You should see something similar to this:
-  * ![Metricbeat Success](https://github.com/RED-USO/Cyber-Mastery/blob/e5a7aa22da81b56c09329a8860bf195a572dabe5/Images/Metricbeat%20Successfull%20Data.jpg)
+![Metricbeat Success](https://github.com/RED-USO/Cyber-Mastery/blob/e5a7aa22da81b56c09329a8860bf195a572dabe5/Images/Metricbeat%20Successfull%20Data.jpg)
