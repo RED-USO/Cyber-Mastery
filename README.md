@@ -145,6 +145,7 @@ SSH into the control node and follow the steps below:
 * Next attach into your Ansible Container `sudo docker attach example_docker'
   * Ansible Container command prompt should look like this example: **`root@6160a9be360e`**
 * Run command `cd /etc/ansible/roles` to enter the roles directory and locate **filebeat-playbook.yml**
+  * The filebeat-playbook.yml should look similar to this:
 * To run the Playbook run command `ansible-playbook filebeat-playbook.yml`
 * Verify in kibana that it was successful
   * You should see something similar to this:
@@ -157,8 +158,8 @@ SSH into the control node and follow the steps below:
 * Start your Ansible Container `sudo docker start example_docker`
 * Next attach into your Ansible Container `sudo docker attach example_docker'
   * Ansible Container command prompt should look like this example: **`root@6160a9be360e`**
-* Run command `cd /etc/ansible/roles` to enter the roles directory and locate **filebeat-playbook.yml**
-* To run the Playbook run command `ansible-playbook filebeat-playbook.yml`
+* Run command `cd /etc/ansible/roles` to enter the roles directory and locate **metricbeat-playbook.yml**
+* To run the Playbook run command `ansible-playbook metricbeat-playbook.yml`
 * Verify in kibana that it was successful
   * You should see something similar to this:
   * ![Metricbeat Success](https://github.com/RED-USO/Cyber-Mastery/blob/e5a7aa22da81b56c09329a8860bf195a572dabe5/Images/Metricbeat%20Successfull%20Data.jpg)
